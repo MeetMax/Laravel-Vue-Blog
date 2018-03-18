@@ -1,0 +1,122 @@
+.lr-container{
+  width: 768px;
+  min-height: 100%;
+  margin: 0 auto;
+  margin-bottom: -90px;
+  padding-top: 50px;
+  .panel-default{
+    width: 90%;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: $box-shadow-1;
+    transition: $transition;
+    .panel-heading{
+      background: $background-1;
+      padding: 15px 20px;
+      font-size: 1.4rem;
+      color: $font-color-4;
+    }
+    .panel-body{
+      margin: 0 auto;
+      padding: 30px 20px;
+      .form-group{
+        margin-bottom: 15px;
+        .control-label{
+          width: 33.33%;
+          padding: 7px 15px 0 15px;
+          float: left;
+          text-align: right;
+          color: $font-color-4;
+        }
+        .form-input {
+          width: 50%;
+          float: left;
+          padding: 0 15px;
+
+          .form-control {
+            width: 100%;
+            height: 34px;
+            padding: 6px 12px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            transition: border-color ease-in-out .25s, box-shadow ease-in-out .25s;
+          }
+          .form-control:focus {
+            box-shadow: $box-shadow-3;
+          }
+        }
+        .checkbox{
+          width: 50%;
+          padding: 0 15px;
+          margin-left: 33.333%;
+          color: $font-color-4;
+        }
+        .sub-btn{
+          width: 50%;
+          padding: 0 15px;
+          margin-left: 33.333%;
+          .btn-primary{
+            background: $font-color-2;
+            border-color: #49697e;color: #ffffff;
+          }
+          .btn{
+            display: inline-block;
+            margin-bottom: 0;
+            font-weight: 400;
+            text-align: center;
+            vertical-align: middle;
+            touch-action: manipulation;
+            cursor: pointer;
+            border: 1px solid transparent;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.428571429;
+            border-radius: 4px;
+            user-select: none;
+          }
+          .btn-link {
+            color: #52768e;
+            font-weight: 400;
+            border-radius: 0;
+          }
+        }
+      }
+    }
+  }
+  .panel-default:hover{
+    box-shadow: $box-shadow-2;
+  }
+}
+@media (max-width: 970px) {
+
+}
+@media (max-width: 768px) {
+  .lr-container{
+    padding: 10px;
+    width: 100%;
+    .panel-default{
+      width: 100%;
+      .panel-body{
+        .form-group{
+          .control-label{
+            float: none;
+          }
+          .form-input{
+            float: none;
+            width: 100%;
+            margin-top: 5px;
+          }
+          .checkbox{
+            margin-left: 0;
+          }
+          .sub-btn{
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+//Public
+@import "public";
+@import "header";
+@import "article";
+@import "highlight.css";
+@import "github-markdown.css";
+@import "show";
+@import "create-discussion";
+@import "catalog";
+@import "comment";
+@import "form";
+@import "footer";
+@import "./vendor/share.min.css";
+
+
+
+.article{
+  width: 500px;
+  height:200px;
+  border:1px solid #666;
+}

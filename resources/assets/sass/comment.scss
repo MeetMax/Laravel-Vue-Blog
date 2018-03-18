@@ -1,0 +1,130 @@
+.comment-wrap{
+  width: 1170px;
+  margin:  20px auto;
+  .floor-wrap{
+    width: 66.66667%;
+    margin: 0 auto;
+    background:#ffffff;
+    .no-comments{
+      text-align: center;
+      font-size: 1.2rem;
+      padding-top: 15px;
+      color: #bbbbbb;
+    }
+    .floor{
+      padding: 10px 15px;
+      .floor-l{
+        float: left;
+        width: 50px;
+
+        .head-img{
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          background: #000;
+          overflow: hidden;
+          img{
+            width: 100%;
+          }
+        }
+      }
+      .floor-r{
+        margin-left: 60px;
+        .name{
+          p{
+            display: inline;
+            margin: 0;
+            font-size: 1rem;
+            em{
+              font-style: normal;
+            }
+            i{
+              font-size: 1rem;
+              color: #aaaaaa;
+              margin-left: 3px;
+            }
+          }
+          span{
+            float: right;
+            color: #aaaaaa;
+            font-size: 1.1rem;
+          }
+        }
+        .comment-time{
+          font-size: 12px;
+          color: #bbbbbb;
+        }
+        .comment-content{
+          padding: 10px 0;
+        }
+        .rely{
+          cursor: pointer;
+          font-size: 12px;
+          color: #bbbbbb;
+          display: inline-block;
+        }
+        .rely:hover{
+          color: $font-color-3;
+        }
+      }
+    }
+    .floor:hover{
+      background: #f8f9fa;
+    }
+  }
+  .comment-text{
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #ffffff;
+    .comment-textarea{
+      width: 100%;
+      height: 120px;
+      border: 1px solid #bbbbbb;
+      outline: none;
+      padding: 10px;
+      transition: $transition;
+    }
+    .comment-textarea:focus{
+      border: 1px solid $font-color-2;
+    }
+    .submit-rely{
+      padding: 6px 10px;
+      background: $font-color-2;
+      border: none;
+      color: #ffffff;
+      border-radius: 3px;
+      margin-top: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+}
+@media (max-width: 1170px) {
+  .comment-wrap{
+    width: 100%;
+    margin-top: 20px;
+    .floor-wrap{
+      width: 100%;
+    }
+    .comment-text{
+      .submit-rely{
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .comment-wrap{
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+    .floor-wrap{
+      width: 100%;
+    }
+    .comment-text{
+      .submit-rely{
+        width: 100%;
+      }
+    }
+  }
+}

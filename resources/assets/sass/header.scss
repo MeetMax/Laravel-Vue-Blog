@@ -1,0 +1,205 @@
+@font-face {
+  font-family: 'Pacifico';
+  src: url('fonts/Pacifico-Regular.ttf');
+}
+$font-color-1:#444443;
+$font-color-2:#52768e;
+$font-color-3:#FF6E40;
+$font-color-4:#555;
+$transition:all 0.3s ease-in-out;
+$box-shadow-1:0 2px 4px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+$box-shadow-2:0px 4px 8px rgba(0,0,0,.16), 0px 8px 12px rgba(0,0,0,.12);
+$background-1:#F5F8FA;
+$box-shadow-3:0px 0px 4px rgba(82,209,251,.4),0 0 8px rgba(82,209,251,.2);
+#header{
+  .container{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    height: 150px;
+    margin: 0 auto;
+    position: static;
+    .h-btn{
+      display: none;
+    }
+    .nav-bar{
+      width: 100%;
+      li{
+        margin-right: 10px;
+        float: left;
+        list-style: none;
+        .search{
+          width: 150px;
+          height: 30px;
+          border: 1px solid #3f5b6e;
+          border-radius: 3px;
+          box-sizing: border-box;
+          input{
+            background: none;
+            outline: none;
+            width: 100%;
+            height: 30px;
+            border: none;
+            padding-left: 5px;
+            box-sizing: border-box;
+            color: #fff;
+          }
+          input:focus{
+            box-shadow: $box-shadow-3;
+          }
+
+        }
+        a{
+          display: block;
+          padding: 5px 15px;
+          border: 1px solid #3f5b6e;
+          border-radius: 15px;
+          color: #fff;
+          background: rgba(82,118,142,.25);
+          text-shadow: #666 1px 1px 2px;
+          transition: all .25s ease-in-out;
+        }
+        a:hover{
+          color: #FF6E40;
+          border: 1px solid #FF6E40;
+          background: #3f5b6e;
+        }
+      }
+      .has-login{
+        position: relative;
+        .name-icon{
+          z-index: 10;
+        }
+        .menu-list{
+          position: absolute;
+          right: -10px;
+          top: 30px;
+          border-radius: 5px;
+          display: none;
+          a{
+            padding: 0;
+            text-align: center;
+            display: inline-block;
+            border-radius: 0;
+            border: none;
+            color: #ffffff;
+            background-color: $font-color-2;
+            width: 120px;
+            line-height: 30px;
+          }
+          a:hover{
+            color: #FF6E40;
+            background: #3f5b6e;
+          }
+          a+a{
+            border-top: 1px solid #ffffff;
+          }
+        }
+      }
+      .has-login.active{
+        .menu-list{
+          display: block;
+        }
+      }
+      .has-login:hover{
+        .menu-list{
+          display: block;
+        }
+      }
+      .has-login{
+        .menu-list:hover{
+          display: block;
+        }
+      }
+    }
+    .description{
+      color: #fff;
+      font-family: Pacifico;
+      font-size: 28px;
+      font-size: 2rem;
+      text-align: center;
+      text-shadow: #666 2px 2px 3px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  #header{
+    .container{
+      position: relative;
+      .h-btn{
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 30px;
+        height: 30px;
+        font-size: 35px;
+        color: #ffffff;
+      }
+      height: auto;
+      background: #52768e;
+      .nav-bar{
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 0.25s ease;
+        .option-l{
+          float: none;
+        }
+        .option-r{
+          float: none;
+        }
+
+        li{
+          float: none;
+          height: 24px;
+          text-align: center;
+          width: 100%;
+          margin-bottom: 20px;
+          .search{
+            width: 100%;
+            border-radius: 15px;
+            input[type="text"]{
+              width: 100%;
+              text-align: center;
+            }
+          }
+        }
+        .has-login{
+          height: auto;
+          .ion-arrow-down-b:before {
+            margin-left: 0px;
+          }
+          .menu-list{
+            width: 100%;
+            position: relative;
+            display: block;
+            top: 0;
+            right: 0;
+            a{
+              display: block;
+              width: 100%;
+              border: 1px solid #3f5b6e;
+              border-radius: 15px;
+              padding: 5px 0;
+              line-height: inherit;
+              margin-top: 20px;
+            }
+            a+a{
+              border-top: 1px solid #3f5b6e;
+            }
+          }
+        }
+      }
+      .nav-bar.show{
+        max-height: 1000px;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+.ion-arrow-down-b:before{
+  float: right;
+  margin-left: 5px;
+  margin-top: 3px;
+}
+

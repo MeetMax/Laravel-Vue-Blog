@@ -1,0 +1,9 @@
+<?php
+return[
+    'social_share'=>[
+        'sites'=>'google,facebook,twitter,weibo,wechat,qq',
+        'image'=>'https://blog.meetmax.xyz/storage/3HpKtfHJ9Uv9LDSGrWqI2EowYvuqq0iljWZkrlaH.jpeg'
+    ],
+    'header_image'=>'https://blog.meetmax.xyz/storage/tOkVKy0OtVnUiz4Bi86C9yAhS2hw5UoVxzGpx1UJ.jpeg',
+    'bg_image'=>'https://blog.meetmax.xyz/storage/N7fUhzp7eV18WF5ZVK18c1ggRT8flHSqRUlmbsCQ.jpeg'
+];

@@ -1,0 +1,123 @@
+.content-wrap{
+  min-height: 100%;
+  .container{
+    width: 970px;
+    margin: 0 auto;
+    position: relative;
+    .timeline-title{
+      color: $font-color-4;
+      font-size: 1.8rem;
+      text-align: center;
+      padding: 25px 0;
+    }
+    .timeline-list{
+      position: relative;
+      .timeline-block{
+        text-align: right;
+        position: relative;
+       margin-bottom: 30px;
+        .timeline-dot{
+          display: block;
+          width: 10px;
+          height:10px;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin-left: -5px;
+          margin-top: -5px;
+          background: $font-color-2;
+          border-radius: 50%;
+          box-shadow: 0 0 0 3px #ffffff;
+        }
+        .timeline-content{
+          padding: 20px 25px;
+          font-size: 1.3rem;
+          width: 47%;
+          float: left;
+          box-sizing: border-box;
+          background: #ffffff;
+          position: relative;
+          a{
+            color: $font-color-4;
+            transition: $transition;
+          }
+          a:hover{
+            color: $font-color-3;
+            text-decoration: underline;
+          }
+          .timeline-date{
+            position: absolute;
+            right: -9rem;
+            top: 50%;
+            font-size: 1rem;
+            margin-top: -10px;
+            color: #555;
+            width: 100px;
+          }
+
+        }
+
+      }
+      .timeline-block:nth-child(2n) .timeline-content{
+        float: right;
+        text-align: left;
+      }
+      .timeline-block:nth-child(2n) .timeline-date{
+        left: -9rem;
+        text-align: left;
+      }
+    }
+    .timeline-list::before{
+      content: ' ';
+      height: 100%;
+      width: 4px;
+      position: absolute;
+      background: rgba(82,118,142,.25);
+      left: 50%;
+      top: 0;
+      margin-left: -2px;
+    }
+  }
+}
+@media (max-width: 970px) {
+  .content-wrap{
+    .container{
+      width: 100%;
+      padding: 0 20px;
+      box-sizing: border-box;
+      .timeline-title{
+        text-align: left;
+        padding: 10px 0;
+        font-size: 1.8rem;
+      }
+      .timeline-list{
+        .timeline-block{
+          text-align: left;
+          margin-bottom: 20px;
+          .timeline-dot{
+            left: -10px;
+          }
+          .timeline-content:nth-child(n){
+            width: 100%;
+            float: none;
+            text-align: left;
+            box-sizing: border-box;
+            font-size: 1.2rem;
+            .timeline-date{
+              position: relative;
+              left: 0;
+              right: 0;
+              top: 0;
+              margin: 0;
+              margin-top: 5px;
+              display: block;
+            }
+          }
+        }
+      }
+      .timeline-list:before{
+        left: -10px;
+      }
+    }
+  }
+}
